@@ -156,7 +156,7 @@ update_lv_script() {
 #
 upgrade_lunarvim() {
 	echo upgrading
-	cd ${LV_CONFIG_DIR} && sudo git fetch && sudo git reset --hard origin/lv.global-install
+	cd ${LV_CONFIG_DIR} && sudo git fetch && sudo git reset --hard origin/master
 	update_lv_script
 	[ -v GLOBAL ] && ${global_cmd} touch ${LV_BASE}/.packer_sync
 }
@@ -165,7 +165,7 @@ install_lunarvim() {
 	echo installing
 	echo "Cloning lunarvim configuration"
 	${global_cmd} mkdir -p ${LV_CONFIG_DIR}
-	${global_cmd} git clone https://github.com/jameswalmsley/lunarvim.git -b lv.global-install ${LV_CONFIG_DIR}
+	${global_cmd} git clone https://github.com/jameswalmsley/lunarvim.git -b master ${LV_CONFIG_DIR}
 	[ -v GLOBAL ] && update_lv_script
 	${global_cmd} touch ${LV_BASE}/.packer_sync
 }
