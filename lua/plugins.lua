@@ -248,6 +248,11 @@ return require("packer").startup(function(use)
   }
 
   -- Install user plugins
+
+  for _, plugin in pairs(O.distrib.plugins) do
+    packer.use(plugin)
+  end
+
   for _, plugin in pairs(O.user_plugins) do
     packer.use(plugin)
   end
