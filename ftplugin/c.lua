@@ -4,6 +4,7 @@ O.formatters.filetype["c"] = {
       exe = O.lang.c.formatter.exe,
       args = O.lang.c.formatter.args,
       stdin = not (O.lang.c.formatter.stdin ~= nil),
+      cwd = vim.fn.expand "%:p:h",
     }
   end,
 }

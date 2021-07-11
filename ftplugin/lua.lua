@@ -4,6 +4,7 @@ O.formatters.filetype["lua"] = {
       exe = O.lang.lua.formatter.exe,
       args = O.lang.lua.formatter.args,
       stdin = not (O.lang.lua.formatter.stdin ~= nil),
+      cwd = vim.fn.expand "%:p:h",
     }
   end,
 }
