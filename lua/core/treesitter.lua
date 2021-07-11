@@ -1,10 +1,10 @@
 local M = {}
 M.config = function()
   O.treesitter = {
-    ensure_installed = {}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    ensure_installed = { "maintained" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     ignore_install = {},
     matchup = {
-      enable = false, -- mandatory, false will disable the whole extension
+      enable = true, -- mandatory, false will disable the whole extension
       -- disable = { "c", "ruby" },  -- optional, list of language that will be disabled
     },
     highlight = {
@@ -18,7 +18,7 @@ M.config = function()
     },
     -- indent = {enable = true, disable = {"python", "html", "javascript"}},
     -- TODO seems to be broken
-    indent = { enable = { "javascriptreact" } },
+    indent = { enable = { "all" } },
     autotag = { enable = false },
     textobjects = {
       swap = {
