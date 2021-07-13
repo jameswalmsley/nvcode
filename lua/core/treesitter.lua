@@ -1,7 +1,7 @@
 local M = {}
 M.config = function()
   O.treesitter = {
-    ensure_installed = { "maintained" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     ignore_install = {},
     matchup = {
       enable = true, -- mandatory, false will disable the whole extension
