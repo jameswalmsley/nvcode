@@ -15,6 +15,11 @@ require("formatter.config").set_defaults {
   filetype = O.formatters.filetype,
 }
 
+require("formatter.config").set_defaults {
+  logging = false,
+  filetype = O.formatters.filetype,
+}
+
 if require("lv-utils").check_lsp_client_active "clangd" then
   return
 end
